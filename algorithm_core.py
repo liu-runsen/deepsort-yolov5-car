@@ -1,4 +1,4 @@
-#_*_coding:UTF-8_*_
+#coding=gbk
 '''
 @Author：Runsen
 '''
@@ -115,8 +115,6 @@ def Judge_overspeed(distance, first_time, second_time, third_time, fouth_time, f
 def alarm(video=None):
     # 初始化 yolov5
     detector = Detector()
-    # 打开视频
-    # video_path = r'rtsp://admin:nianguo2020@192.168.31.64:554/Streaming/Channels/101?transportmode=unicast'
 
     if video:
         capture = cv2.VideoCapture(video)
@@ -159,28 +157,11 @@ def alarm(video=None):
             # ----------------------判断撞线----------------------
             for item_bbox in list_bboxs:
                 x1, y1, x2, y2, label, track_id = item_bbox
-                # 撞线检测点，(x1，y1)，y方向偏移比例 0.0~1.0
                 x = int((x1 + x2) / 2)
                 y = y2
-
-                # if poly1.contains(Point(2 * x, 2 * y)) and line1_value[y, x] == 1:
-                #     start_time = time + (divided / fps)
-                #     print(f'进入第一块矩形类别: {label} | id: {track_id} | : 碰撞点的坐标 {x, y} | : start_time: {start_time}')
-
-                # 同一车同一track_id
-
                 if poly2.contains(Point(2 * x, 2 * y)) and line2_value[y, x] == 1 :
                     first_time = time + (divided / fps)
-                    # spend_time_1 = first_time - start_time
                     print(f'进入第一块矩形类别: {label} | id: {track_id} | : 碰撞点的坐标 {x, y} | : time: {first_time}')
-
-                    # try:
-                    #     print(f'第一次进入时间： {start_time}')
-                    # except:
-                    #     start_time = 0
-                    #     print(f'不存在：start_time 类别: {label} | id: {track_id} | 在进入第一块矩形没有检测到')
-                    #
-
 
                 if poly3.contains(Point(2 * x, 2 * y)) and line3_value[ y, x] == 1 and track_id == track_id and label == label:
                     second_time = time + (divided / fps)

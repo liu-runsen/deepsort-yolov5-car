@@ -1,8 +1,4 @@
-#_*_coding:UTF-8_*_
-
-'''
-@Author£ºRunsen
-'''
+#coding=gbk
 
 '''
 @Author£ºRunsen

@@ -1,4 +1,4 @@
-#_*_coding:UTF-8_*_
+#coding=gbk
 '''
 @Author：Runsen
 判断点是不是在矩形中
