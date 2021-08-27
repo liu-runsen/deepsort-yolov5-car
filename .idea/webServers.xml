@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="708deba1-91b8-4944-8486-dff6be54e1bb" name="deepsort">
+        <fileTransfer rootFolder="/home/lrs/deepsort/unbox_yolov5_deepsort_counting-main/unbox_yolov5_deepsort_counting-main" accessType="SFTP" host="192.168.31.125" port="22" sshConfigId="a3022705-eb94-48b1-8eb5-b171e1f8cf17" sshConfig="ng@192.168.31.125:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="570578d7-f1f4-4a54-886c-79ae20b0f74e" name="yolo-sort">
+        <fileTransfer rootFolder="/home/lrs/yolo-sort" accessType="SFTP" host="192.168.31.125" port="22" sshConfigId="a3022705-eb94-48b1-8eb5-b171e1f8cf17" sshConfig="ng@192.168.31.125:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
